@@ -257,14 +257,14 @@ export default function Home() {
                 <span className="goldHover">Download</span> AssistPro
               </h3>
               <p style={{ marginTop: 10, color: "rgba(255,255,255,.66)", lineHeight: 1.7 }}>
-                Replace the buttons with your App Store and Play Store links when ready.
+                Get notified when AssistPro launches on iOS and Android.
               </p>
               <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-                <a className="btn btnPrimary" href="#">
-                  <span className="goldHover">App Store</span>
+                <a className="btn btnPrimary" href="mailto:seaointeralia@gmail.com?subject=Notify%20Me%20-%20AssistPro%20iOS%20Launch&body=Please%20notify%20me%20when%20AssistPro%20is%20available%20on%20the%20App%20Store.">
+                  <span className="goldHover">Get Notified - iOS</span>
                 </a>
-                <a className="btn" href="#">
-                  Google Play
+                <a className="btn" href="mailto:seaointeralia@gmail.com?subject=Notify%20Me%20-%20AssistPro%20Android%20Launch&body=Please%20notify%20me%20when%20AssistPro%20is%20available%20on%20Google%20Play.">
+                  Get Notified - Android
                 </a>
               </div>
             </div>
