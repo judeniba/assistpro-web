@@ -7,7 +7,7 @@
   "containerDefinitions": [
     {
       "name": "assistpro-web",
-      "image": "<IMAGE_URI>",
+      "image": "REPLACE_WITH_ECR_IMAGE_URI",
       "essential": true,
       "portMappings": [
         {

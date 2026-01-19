@@ -59,17 +59,24 @@ echo -e "${GREEN}Docker image built successfully${NC}"
 
 # Tag image with ECR URI
 echo -e "${YELLOW}Tagging image...${NC}"
+TIMESTAMP=$(date +%Y%m%d-%H%M%S)
 docker tag $ECR_REPOSITORY:latest $ECR_URI:latest
-docker tag $ECR_REPOSITORY:latest $ECR_URI:$(date +%Y%m%d-%H%M%S)
+docker tag $ECR_REPOSITORY:latest $ECR_URI:$TIMESTAMP
 
 # Push to ECR
 echo -e "${YELLOW}Pushing image to ECR...${NC}"
 docker push $ECR_URI:latest
-docker push $ECR_URI:$(date +%Y%m%d-%H%M%S)
 if [ $? -ne 0 ]; then
-    echo -e "${RED}Failed to push to ECR${NC}"
+    echo -e "${RED}Failed to push latest tag to ECR${NC}"
+    exit 1
+fi
+
+docker push $ECR_URI:$TIMESTAMP
+if [ $? -ne 0 ]; then
+    echo -e "${RED}Failed to push timestamped tag to ECR${NC}"
     exit 1
 fi
 
 echo -e "${GREEN}Successfully pushed image to ECR!${NC}"
 echo -e "${GREEN}Image URI: $ECR_URI:latest${NC}"
+echo -e "${GREEN}Timestamped URI: $ECR_URI:$TIMESTAMP${NC}"

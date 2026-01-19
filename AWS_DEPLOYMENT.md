@@ -92,7 +92,7 @@ aws logs create-log-group --log-group-name /ecs/assistpro-web --region us-east-1
 5. **Register Task Definition**:
 ```bash
 # Update the task definition with your ECR image URI
-# Edit aws/task-definition.json and replace <IMAGE_URI> with your image
+# Edit aws/task-definition.json and replace REPLACE_WITH_ECR_IMAGE_URI with your image
 
 aws ecs register-task-definition \
   --cli-input-json file://aws/task-definition.json \
