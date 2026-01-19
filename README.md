@@ -25,8 +25,27 @@ npm run dev
 ## Social links
 Edit links in: `components/TopRightSocialsAnimated.tsx`.
 
-## Deploy (Vercel)
-- Import the repo in Vercel
-- Framework: Next.js
-- Build: `npm run build`
+## Deploy
+
+### Vercel (Recommended)
+1. Push this repository to GitHub
+2. Go to [Vercel Dashboard](https://vercel.com/new)
+3. Import your repository
+4. Vercel will auto-detect Next.js settings
+5. Click "Deploy"
+
+The deployment will automatically:
+- Install dependencies
+- Build the project with `npm run build`
+- Deploy to production
+
+### Manual Deployment
+```bash
+npm install
+npm run build
+npm start
+```
+
+## Environment Variables
+No environment variables required for basic deployment.
 
