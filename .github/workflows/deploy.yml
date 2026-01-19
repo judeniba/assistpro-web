@@ -12,9 +12,14 @@ env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 
+permissions:
+  contents: read
+
 jobs:
   lint-and-build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -38,6 +43,9 @@ jobs:
   deploy-preview:
     needs: lint-and-build
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
     if: github.event_name == 'pull_request'
     steps:
       - name: Checkout code
@@ -63,6 +71,9 @@ jobs:
   deploy-production:
     needs: lint-and-build
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     steps:
       - name: Checkout code
