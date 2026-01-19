@@ -1,4 +1,7 @@
-# Multi-stage build for optimal image size
+# Multi-stage build with standalone output (smallest image size)
+# To use this Dockerfile:
+# 1. Uncomment "output: 'standalone'" in next.config.js
+# 2. Build: docker build -f Dockerfile.standalone -t assistpro-web .
 
 # Stage 1: Dependencies
 FROM node:18-alpine AS deps
@@ -30,11 +33,10 @@ ENV NODE_ENV production
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
-# Copy necessary files
+# Copy necessary files (standalone mode)
 COPY --from=builder /app/public ./public
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/package.json ./package.json
+COPY --from=builder /app/.next/standalone ./
+COPY --from=builder /app/.next/static ./.next/static
 
 # Set ownership
 RUN chown -R nextjs:nodejs /app
@@ -46,4 +48,4 @@ EXPOSE 3000
 ENV PORT 3000
 ENV HOSTNAME "0.0.0.0"
 
-CMD ["npm", "start"]
+CMD ["node", "server.js"]

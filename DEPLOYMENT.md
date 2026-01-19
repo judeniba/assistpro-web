@@ -71,13 +71,22 @@ This guide provides comprehensive deployment recommendations for the AssistPro w
    ```bash
    docker build -t assistpro-web .
    ```
+   
+   **For optimized standalone build (smaller image):**
+   - Uncomment `output: 'standalone'` in `next.config.js`
+   - Use: `docker build -f Dockerfile.standalone -t assistpro-web .`
 
 2. **Run Locally**
    ```bash
    docker run -p 3000:3000 assistpro-web
    ```
 
-3. **Deploy to Cloud**
+3. **Or use Docker Compose**
+   ```bash
+   docker-compose up -d
+   ```
+
+4. **Deploy to Cloud**
    
    **AWS ECS/Fargate:**
    ```bash
