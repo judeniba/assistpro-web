@@ -334,8 +334,12 @@ NEXT_PUBLIC_ANALYTICS_ID=your-analytics-id
 1. Keep dependencies updated: `npm audit fix`
 2. Use environment variables for secrets (never commit them)
 3. Enable HTTPS (automatic with Vercel/Netlify)
-4. Set up CSP headers if needed
+4. **Content Security Policy (CSP)**: The provided CSP headers include `unsafe-inline` and `unsafe-eval` to support Next.js, React, and Framer Motion. For production hardening:
+   - Consider implementing nonce-based CSP
+   - Review and tighten CSP directives based on your specific needs
+   - Test thoroughly after CSP changes
 5. Regular security audits
+6. Enable rate limiting if using API routes
 
 ---
 
