@@ -125,7 +125,7 @@ export default function Home() {
 
               <p style={{ margin: 0, fontSize: 16, lineHeight: 1.7, color: "rgba(255,255,255,.72)" }}>
                 Find verified <b>Personal Assistants</b>, <b>Drivers</b> (client vehicle), <b>Chaperones (Male)</b>, <b>Hostesses (Female)</b>, and
-                <b> Artists</b>. Multilingual. Discreet. Policy-enforced.
+                <b>Artists</b>. Multilingual. Discreet. Policy-enforced.
               </p>
 
               <div style={{ display: "flex", gap: 12, marginTop: 18, flexWrap: "wrap" }}>

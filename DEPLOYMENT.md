@@ -105,12 +105,12 @@ The repository includes `vercel.json` with these settings:
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/node": "latest",
-    "@types/react": "latest",
-    "@types/react-dom": "latest",
-    "eslint": "^8.57.0",
-    "eslint-config-next": "15.1.3",
-    "typescript": "latest"
+    "@types/node": "^25.0.9",
+    "@types/react": "^19.2.8",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^15.1.3",
+    "typescript": "^5.9.3"
   }
 }
 ```
