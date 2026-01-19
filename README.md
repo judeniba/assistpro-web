@@ -25,8 +25,37 @@ npm run dev
 ## Social links
 Edit links in: `components/TopRightSocialsAnimated.tsx`.
 
-## Deploy (Vercel)
-- Import the repo in Vercel
-- Framework: Next.js
-- Build: `npm run build`
+## Deploy to Vercel
+
+### Option 1: Deploy via Vercel Dashboard
+1. Go to [Vercel](https://vercel.com) and sign in with your GitHub account
+2. Click "Add New Project"
+3. Import your `assistpro-web` repository
+4. Vercel will automatically detect Next.js and configure:
+   - **Framework Preset**: Next.js
+   - **Build Command**: `npm run build`
+   - **Output Directory**: `.next` (auto-detected)
+   - **Install Command**: `npm install`
+5. Click "Deploy"
+
+### Option 2: Deploy via Vercel CLI
+```bash
+# Install Vercel CLI globally
+npm install -g vercel
+
+# Deploy from project directory
+vercel
+
+# For production deployment
+vercel --prod
+```
+
+### Configuration
+The project includes:
+- `vercel.json` - Vercel deployment configuration
+- `.vercelignore` - Files excluded from deployment
+- `tsconfig.json` - TypeScript configuration
+- `.eslintrc.json` - ESLint configuration
+
+All settings are pre-configured for optimal Vercel deployment.
 
