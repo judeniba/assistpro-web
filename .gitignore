@@ -44,4 +44,3 @@ next-env.d.ts
 
 # temporary files
 assistpro-web.zip
-git add . git commit -m "Initial commit: AssistPro web landing page"

@@ -23,7 +23,7 @@ npm run dev
 ```
 
 ## Social links
-Edit links in: `components/TopRightSocialsAnimated.tsx`.
+⚠️ **Note**: The social media links in `components/TopRightSocialsAnimated.tsx` are currently placeholders. Update them with your actual AssistPro social media URLs before deployment.
 
 ## Deploy to Vercel
 
