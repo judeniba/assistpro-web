@@ -25,8 +25,21 @@ npm run dev
 ## Social links
 Edit links in: `components/TopRightSocialsAnimated.tsx`.
 
-## Deploy (Vercel)
-- Import the repo in Vercel
-- Framework: Next.js
-- Build: `npm run build`
+## Deploy
+
+### Vercel (Recommended)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/judeniba/assistpro-web)
+
+1. Click the button above or import the repo in Vercel
+2. Framework: Next.js (auto-detected)
+3. Build command: `npm run build` (configured automatically)
+4. Deploy!
+
+The project is configured with `vercel.json` for optimal deployment settings.
+
+### Manual Build
+```bash
+npm run build
+npm run start
+```
 
