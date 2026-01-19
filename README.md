@@ -25,8 +25,14 @@ npm run dev
 ## Social links
 Edit links in: `components/TopRightSocialsAnimated.tsx`.
 
-## Deploy (Vercel)
-- Import the repo in Vercel
-- Framework: Next.js
-- Build: `npm run build`
+## Deployment
+
+**📚 See [DEPLOYMENT.md](./DEPLOYMENT.md) for comprehensive deployment recommendations and options.**
+
+Quick options:
+- **Vercel** (Recommended): See [DEPLOYMENT.md](./DEPLOYMENT.md#-option-1-vercel-recommended---best-for-nextjs)
+- **Docker**: See [DEPLOYMENT.md](./DEPLOYMENT.md#-option-2-docker--cloud-provider-awsgcpazure)
+- **Netlify**: See [DEPLOYMENT.md](./DEPLOYMENT.md#-option-3-netlify)
+- **Static Export**: See [DEPLOYMENT.md](./DEPLOYMENT.md#-option-4-static-export-to-any-host)
+- **CI/CD**: See [DEPLOYMENT.md](./DEPLOYMENT.md#-option-5-cicd-with-github-actions)
 
