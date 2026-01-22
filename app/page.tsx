@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
 import TopRightSocialsAnimated from "../components/TopRightSocialsAnimated";
 
 export default function Home() {
@@ -11,22 +12,27 @@ export default function Home() {
       {
         title: "Personal Assistants",
         desc: "Daily, weekly, or long-term support for travel, scheduling, and lifestyle operations.",
+        href: "/personal-assistants",
       },
       {
         title: "Drivers (Client Vehicle)",
         desc: "Professional drivers operating the client’s vehicle—executive standard, safety-first.",
+        href: "/drivers",
       },
       {
         title: "Chaperones (Male)",
         desc: "Professional presence for events and travel. Verified, discreet, and policy-enforced.",
+        href: "/chaperones",
       },
       {
         title: "Hostesses (Female)",
         desc: "Event-facing hospitality professionals for VIP guest management, conferences, and launches.",
+        href: "/hostesses",
       },
       {
         title: "Artists",
         desc: "Verified talent for performances and events—portfolio-based, brand-safe.",
+        href: "/artists",
       },
     ],
     []
@@ -220,20 +226,31 @@ export default function Home() {
             }}
           >
             {services.map((s) => (
-              <div
+              <Link
                 key={s.title}
+                href={s.href}
                 style={{
                   border: "1px solid rgba(255,255,255,.12)",
                   background: "rgba(255,255,255,.04)",
                   borderRadius: 20,
                   padding: 20,
+                  display: "block",
+                  transition: "transform 150ms ease, background 150ms ease",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = "translateY(-2px)";
+                  e.currentTarget.style.background = "rgba(255,255,255,.08)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "translateY(0)";
+                  e.currentTarget.style.background = "rgba(255,255,255,.04)";
                 }}
               >
                 <div style={{ fontWeight: 950, fontSize: 18 }}>{s.title}</div>
                 <div style={{ marginTop: 10, color: "rgba(255,255,255,.66)", lineHeight: 1.65 }}>
                   {s.desc}
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
