@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import TopRightSocialsAnimated from "../components/TopRightSocialsAnimated";
+import FooterSocials from "../components/FooterSocials";
 
 export default function Home() {
   const [videoReady, setVideoReady] = useState(false);
@@ -330,20 +331,31 @@ export default function Home() {
 
       {/* Footer */}
       <footer style={{ borderTop: "1px solid rgba(255,255,255,.10)", padding: "34px 0" }}>
-        <div className="container" style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 14 }}>
-          <div style={{ color: "rgba(255,255,255,.56)", fontSize: 12 }}>
-            © {new Date().getFullYear()} AssistPro. All rights reserved.
+        <div className="container">
+          {/* Social Media Links */}
+          <div style={{ marginBottom: 24 }}>
+            <div style={{ fontWeight: 900, letterSpacing: ".08em", fontSize: 12, color: "rgba(255,255,255,.70)", marginBottom: 12 }}>
+              CONNECT WITH US
+            </div>
+            <FooterSocials />
           </div>
-          <div style={{ display: "flex", gap: 14, flexWrap: "wrap", fontSize: 12, color: "rgba(255,255,255,.56)" }}>
-            <a href="#" style={{ opacity: 0.9 }}>
-              Privacy
-            </a>
-            <a href="#" style={{ opacity: 0.9 }}>
-              Terms
-            </a>
-            <a href="#" style={{ opacity: 0.9 }}>
-              Provider Standards
-            </a>
+          
+          {/* Footer Bottom */}
+          <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 14, paddingTop: 20, borderTop: "1px solid rgba(255,255,255,.06)" }}>
+            <div style={{ color: "rgba(255,255,255,.56)", fontSize: 12 }}>
+              © {new Date().getFullYear()} AssistPro. All rights reserved.
+            </div>
+            <div style={{ display: "flex", gap: 14, flexWrap: "wrap", fontSize: 12, color: "rgba(255,255,255,.56)" }}>
+              <a href="#" style={{ opacity: 0.9 }}>
+                Privacy
+              </a>
+              <a href="#" style={{ opacity: 0.9 }}>
+                Terms
+              </a>
+              <a href="#" style={{ opacity: 0.9 }}>
+                Provider Standards
+              </a>
+            </div>
           </div>
         </div>
       </footer>
