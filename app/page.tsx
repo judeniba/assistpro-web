@@ -129,8 +129,11 @@ export default function Home() {
               </p>
 
               <div style={{ display: "flex", gap: 12, marginTop: 18, flexWrap: "wrap" }}>
-                <a className="btn btnPrimary" href="#download">
-                  <span className="goldHover">Download AssistPro</span>
+                <a className="btn btnPrimary" href="/service-members">
+                  <span className="goldHover">Browse Service Providers</span>
+                </a>
+                <a className="btn" href="#download">
+                  Download AssistPro
                 </a>
                 <a className="btn" href="#partners">
                   Partner with Hotels
@@ -321,7 +324,31 @@ export default function Home() {
             <p style={{ marginTop: 10, color: "rgba(255,255,255,.66)", lineHeight: 1.7 }}>
               Providers are searchable only after admin verification. This protects clients and preserves brand standards.
             </p>
-            <div style={{ color: "rgba(255,255,255,.56)", fontSize: 13, lineHeight: 1.65 }}>
+            
+            {/* Booking Fee Structure */}
+            <div
+              style={{
+                marginTop: 18,
+                border: "1px solid rgba(215, 169, 58, 0.25)",
+                background: "rgba(215, 169, 58, 0.06)",
+                borderRadius: 16,
+                padding: 18,
+              }}
+            >
+              <div style={{ fontWeight: 900, letterSpacing: ".08em", fontSize: 12, color: "rgba(255,255,255,.70)", marginBottom: 10 }}>
+                PAYMENT STRUCTURE
+              </div>
+              <div style={{ color: "rgba(255,255,255,.72)", fontSize: 14, lineHeight: 1.7 }}>
+                <p style={{ margin: "0 0 10px" }}>
+                  • Set your own booking fees (hourly, daily, weekly, or event-based)<br />
+                  • You receive <strong className="goldHover" style={{ fontWeight: 900 }}>85%</strong> of every booking<br />
+                  • AssistPro retains <strong>15%</strong> commission (excluding taxes and transaction fees)<br />
+                  • Payments processed securely via Stripe and Flutterwave
+                </p>
+              </div>
+            </div>
+
+            <div style={{ marginTop: 16, color: "rgba(255,255,255,.56)", fontSize: 13, lineHeight: 1.65 }}>
               Admin email: <b>seaointeralia@gmail.com</b>
             </div>
           </div>
