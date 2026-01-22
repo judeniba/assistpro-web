@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
 import TopRightSocialsAnimated from "../components/TopRightSocialsAnimated";
 
 export default function Home() {
@@ -129,9 +130,9 @@ export default function Home() {
               </p>
 
               <div style={{ display: "flex", gap: 12, marginTop: 18, flexWrap: "wrap" }}>
-                <a className="btn btnPrimary" href="#download">
-                  <span className="goldHover">Download AssistPro</span>
-                </a>
+                <Link className="btn btnPrimary" href="/booking">
+                  <span className="goldHover">Book Now</span>
+                </Link>
                 <a className="btn" href="#partners">
                   Partner with Hotels
                 </a>
@@ -335,15 +336,15 @@ export default function Home() {
             © {new Date().getFullYear()} AssistPro. All rights reserved.
           </div>
           <div style={{ display: "flex", gap: 14, flexWrap: "wrap", fontSize: 12, color: "rgba(255,255,255,.56)" }}>
-            <a href="#" style={{ opacity: 0.9 }}>
+            <Link href="/privacy-policy" style={{ opacity: 0.9 }}>
               Privacy
-            </a>
-            <a href="#" style={{ opacity: 0.9 }}>
+            </Link>
+            <Link href="/terms-and-conditions" style={{ opacity: 0.9 }}>
               Terms
-            </a>
-            <a href="#" style={{ opacity: 0.9 }}>
-              Provider Standards
-            </a>
+            </Link>
+            <Link href="/service-agreement" style={{ opacity: 0.9 }}>
+              Service Agreement
+            </Link>
           </div>
         </div>
       </footer>
