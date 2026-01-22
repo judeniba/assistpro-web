@@ -3,18 +3,20 @@
 import { useState } from "react";
 import Link from "next/link";
 
+const initialFormState = {
+  name: "",
+  email: "",
+  phone: "",
+  serviceType: "",
+  date: "",
+  duration: "",
+  additionalNotes: "",
+  acceptedTerms: false,
+  acceptedServiceAgreement: false,
+};
+
 export default function BookingForm() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    serviceType: "",
-    date: "",
-    duration: "",
-    additionalNotes: "",
-    acceptedTerms: false,
-    acceptedServiceAgreement: false,
-  });
+  const [formData, setFormData] = useState(initialFormState);
 
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
@@ -99,17 +101,7 @@ export default function BookingForm() {
       
       // Reset form after submission
       setTimeout(() => {
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          serviceType: "",
-          date: "",
-          duration: "",
-          additionalNotes: "",
-          acceptedTerms: false,
-          acceptedServiceAgreement: false,
-        });
+        setFormData(initialFormState);
         setSubmitted(false);
       }, 3000);
     }
@@ -139,6 +131,8 @@ export default function BookingForm() {
     fontSize: "13px",
     marginTop: "6px",
   };
+
+  const today = new Date().toISOString().split("T")[0];
 
   if (submitted) {
     return (
@@ -242,7 +236,7 @@ export default function BookingForm() {
           value={formData.date}
           onChange={handleChange}
           style={inputStyle}
-          min={new Date().toISOString().split("T")[0]}
+          min={today}
         />
         {errors.date && <div style={errorStyle}>{errors.date}</div>}
       </div>
