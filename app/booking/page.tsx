@@ -2,17 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-
-interface Driver {
-  id: string;
-  name: string;
-  rating: number;
-  experience: string;
-  languages: string[];
-  hourlyRate: number;
-  verified: boolean;
-  image: string;
-}
+import { Driver, Booking } from "../types/booking";
 
 export default function BookingPage() {
   const router = useRouter();
@@ -21,7 +11,7 @@ export default function BookingPage() {
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
   const [bookingSuccess, setBookingSuccess] = useState(false);
-  const [bookingDetails, setBookingDetails] = useState<any>(null);
+  const [bookingDetails, setBookingDetails] = useState<Booking | null>(null);
 
   // Form state
   const [formData, setFormData] = useState({

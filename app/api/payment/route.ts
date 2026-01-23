@@ -1,9 +1,10 @@
 import { NextResponse } from "next/server";
+import { Payment, PaymentRequest } from "../../types/booking";
 
 // Mock payment processing - In production, integrate with Stripe/Flutterwave
 export async function POST(request: Request) {
   try {
-    const body = await request.json();
+    const body: PaymentRequest = await request.json();
     const { bookingId, amount, paymentMethod } = body;
 
     // Validate required fields
@@ -16,7 +17,7 @@ export async function POST(request: Request) {
 
     // Simulate payment processing
     // In production, this would call Stripe or Flutterwave API
-    const payment = {
+    const payment: Payment = {
       id: `payment-${Date.now()}`,
       bookingId,
       amount,

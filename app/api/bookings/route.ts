@@ -1,11 +1,12 @@
 import { NextResponse } from "next/server";
+import { Booking, BookingRequest } from "../../types/booking";
 
 // Mock bookings storage - In production, this would be a database
-const bookings: any[] = [];
+const bookings: Booking[] = [];
 
 export async function POST(request: Request) {
   try {
-    const body = await request.json();
+    const body: BookingRequest = await request.json();
     const { driverId, driverName, hours, hourlyRate, clientName, clientEmail, clientPhone } = body;
 
     // Validate required fields
@@ -23,7 +24,7 @@ export async function POST(request: Request) {
     const total = subtotal;
 
     // Create booking
-    const booking = {
+    const booking: Booking = {
       id: `booking-${Date.now()}`,
       driverId,
       driverName,

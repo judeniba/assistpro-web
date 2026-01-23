@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server";
+import { Driver } from "../../types/booking";
 
 // Mock driver data - In production, this would come from a database
-const drivers = [
+const drivers: Driver[] = [
   {
     id: "driver-1",
     name: "James Anderson",
