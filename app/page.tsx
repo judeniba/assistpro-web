@@ -129,8 +129,11 @@ export default function Home() {
               </p>
 
               <div style={{ display: "flex", gap: 12, marginTop: 18, flexWrap: "wrap" }}>
-                <a className="btn btnPrimary" href="#download">
-                  <span className="goldHover">Download AssistPro</span>
+                <a className="btn btnPrimary" href="/booking">
+                  <span className="goldHover">Book a Driver Now</span>
+                </a>
+                <a className="btn" href="#download">
+                  Download AssistPro
                 </a>
                 <a className="btn" href="#partners">
                   Partner with Hotels
