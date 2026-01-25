@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import type { Provider } from "@/lib/types";
+import { ServiceCategory } from "@/lib/types";
 
 /**
  * Example API route handler for providers
@@ -16,13 +16,13 @@ export async function GET(request: NextRequest) {
 
     // TODO: Replace with actual database query
     // This is mock data for demonstration
-    const mockProviders: Provider[] = [
+    const mockProviders = [
       {
         id: "1",
         name: "John Smith",
         email: "john@example.com",
         phone: "+1234567890",
-        category: "personal_assistant" as any,
+        category: ServiceCategory.PERSONAL_ASSISTANT,
         languages: ["English", "French"],
         hourlyRate: 50,
         dailyRate: 400,
@@ -105,7 +105,7 @@ export async function POST(request: NextRequest) {
 
     // TODO: Replace with actual database insertion
     // In production, this would save to your database
-    const newProvider: Provider = {
+    const newProvider = {
       id: Math.random().toString(36).substr(2, 9),
       name: body.name,
       email: body.email,

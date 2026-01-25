@@ -1,5 +1,5 @@
-import { NextRequest, NextResponse } from "next/server";
-import type { Service } from "@/lib/types";
+import { NextResponse } from "next/server";
+import { ServiceCategory } from "@/lib/types";
 
 /**
  * Example API route handler for services
@@ -9,12 +9,12 @@ export async function GET() {
   try {
     // TODO: Replace with actual database query
     // This is mock data for demonstration
-    const services: Service[] = [
+    const services = [
       {
         id: "1",
         title: "Personal Assistants",
         description: "Daily, weekly, or long-term support for travel, scheduling, and lifestyle operations.",
-        category: "personal_assistant" as any,
+        category: ServiceCategory.PERSONAL_ASSISTANT,
         hourlyRate: 50,
         dailyRate: 400,
         weeklyRate: 2500,
@@ -23,7 +23,7 @@ export async function GET() {
         id: "2",
         title: "Drivers (Client Vehicle)",
         description: "Professional drivers operating the client's vehicle—executive standard, safety-first.",
-        category: "driver" as any,
+        category: ServiceCategory.DRIVER,
         hourlyRate: 40,
         dailyRate: 320,
         weeklyRate: 2000,
@@ -32,7 +32,7 @@ export async function GET() {
         id: "3",
         title: "Chaperones (Male)",
         description: "Professional presence for events and travel. Verified, discreet, and policy-enforced.",
-        category: "chaperone" as any,
+        category: ServiceCategory.CHAPERONE,
         hourlyRate: 60,
         dailyRate: 480,
         weeklyRate: 3000,
@@ -41,7 +41,7 @@ export async function GET() {
         id: "4",
         title: "Hostesses (Female)",
         description: "Event-facing hospitality professionals for VIP guest management, conferences, and launches.",
-        category: "hostess" as any,
+        category: ServiceCategory.HOSTESS,
         hourlyRate: 60,
         dailyRate: 480,
         weeklyRate: 3000,
@@ -50,7 +50,7 @@ export async function GET() {
         id: "5",
         title: "Artists",
         description: "Verified talent for performances and events—portfolio-based, brand-safe.",
-        category: "artist" as any,
+        category: ServiceCategory.ARTIST,
         hourlyRate: 100,
         dailyRate: 800,
         weeklyRate: 5000,

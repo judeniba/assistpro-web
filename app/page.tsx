@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import TopRightSocialsAnimated from "../components/TopRightSocialsAnimated";
+import ServicesExample from "../components/ServicesExample";
 
 export default function Home() {
   const [videoReady, setVideoReady] = useState(false);
@@ -238,6 +239,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Backend Integration Example - Remove this section once you've connected your real backend */}
+      <ServicesExample />
 
       {/* Download */}
       <section id="download" style={{ padding: "56px 0" }}>
