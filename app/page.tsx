@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import TopRightSocialsAnimated from "../components/TopRightSocialsAnimated";
+import ZipDownloader from "../components/ZipDownloader";
 
 export default function Home() {
   const [videoReady, setVideoReady] = useState(false);
@@ -266,6 +267,7 @@ export default function Home() {
                 <a className="btn" href="#">
                   Google Play
                 </a>
+                <ZipDownloader />
               </div>
             </div>
             <div
