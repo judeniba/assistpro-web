@@ -26,6 +26,11 @@ export async function createZipFile(
  * @param filename - The name of the zip file
  */
 export function downloadZip(zipBlob: Blob, filename: string = "download.zip") {
+  // Check if we're in a browser environment
+  if (typeof window === 'undefined') {
+    throw new Error('downloadZip can only be called in a browser environment');
+  }
+  
   const url = URL.createObjectURL(zipBlob);
   const link = document.createElement("a");
   link.href = url;

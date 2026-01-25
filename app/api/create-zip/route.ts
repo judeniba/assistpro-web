@@ -34,7 +34,9 @@ export async function POST(request: NextRequest) {
       },
     });
   } catch (error) {
-    console.error("Error creating zip:", error);
+    // Log only the error message to avoid exposing sensitive information
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+    console.error("Error creating zip:", errorMessage);
     return NextResponse.json(
       { error: "Failed to create zip file" },
       { status: 500 }

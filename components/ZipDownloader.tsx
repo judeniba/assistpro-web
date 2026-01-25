@@ -5,9 +5,11 @@ import { createAndDownloadZip } from "../lib/zipUtils";
 
 export default function ZipDownloader() {
   const [isCreating, setIsCreating] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleCreateZip = async () => {
     setIsCreating(true);
+    setError(null);
     try {
       // Example files to include in the zip
       const files = [
@@ -54,25 +56,37 @@ Contact: seaointeralia@gmail.com`,
       await createAndDownloadZip(files, "assistpro-info.zip");
     } catch (error) {
       console.error("Error creating zip:", error);
-      alert("Failed to create zip file. Please try again.");
+      setError("Failed to create zip file. Please try again.");
     } finally {
       setIsCreating(false);
     }
   };
 
   return (
-    <button
-      onClick={handleCreateZip}
-      disabled={isCreating}
-      className="btn btnPrimary"
-      style={{
-        opacity: isCreating ? 0.6 : 1,
-        cursor: isCreating ? "not-allowed" : "pointer",
-      }}
-    >
-      <span className="goldHover">
-        {isCreating ? "Creating Zip..." : "Download Info Package"}
-      </span>
-    </button>
+    <div style={{ position: 'relative' }}>
+      <button
+        onClick={handleCreateZip}
+        disabled={isCreating}
+        className="btn btnPrimary"
+        style={{
+          opacity: isCreating ? 0.6 : 1,
+          cursor: isCreating ? "not-allowed" : "pointer",
+        }}
+      >
+        <span className="goldHover">
+          {isCreating ? "Creating Zip..." : "Download Info Package"}
+        </span>
+      </button>
+      {error && (
+        <div style={{ 
+          marginTop: 8, 
+          color: '#ff6b6b', 
+          fontSize: 12,
+          fontWeight: 600 
+        }}>
+          {error}
+        </div>
+      )}
+    </div>
   );
 }
