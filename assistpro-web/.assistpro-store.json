@@ -1,0 +1,253 @@
+{
+  "users": [
+    {
+      "id": "admin-1",
+      "name": "AssistPro Admin",
+      "email": "admin@assistpro.com",
+      "passwordHash": "b52e9114fbbd5c127b83cd96ca8ae5ae:77ae1d19b1d3a7ff74e5ab89324e62cf73b1780b7ff29136cd44c7630e3711ebcb67f50bb8ecd6a37569928815236af5d08d5c67e285b070a12b5690c398ff69",
+      "role": "admin",
+      "createdAt": "2026-01-01T00:00:00Z"
+    },
+    {
+      "id": "client-1",
+      "name": "James Harrington",
+      "email": "james@example.com",
+      "passwordHash": "5d9d9c5479c88578dba658f41a4365df:8d1046ab0abc70da4ae1e33d78dbc06bab44c25e3cc2345f26ee010868b43ccb8af66ff545e472c108fc3718e523df256d038ce463c58221bd1b7e29b0d03643",
+      "role": "client",
+      "createdAt": "2026-01-01T00:00:00Z"
+    },
+    {
+      "id": "client-2",
+      "name": "Isabelle Moreau",
+      "email": "isabelle@example.com",
+      "passwordHash": "00978e3f2b8a71913d518755a2acf17a:82590907e6ff18bcd4dc121c17e281b74322b7f20a861d86adfddec2f12de5cb8dce1e35af18300d8d24d4f046a6f714c168416b0ba78fc8874058b500d13177",
+      "role": "client",
+      "createdAt": "2026-01-01T00:00:00Z"
+    },
+    {
+      "id": "pu1",
+      "name": "Sofia Laurent",
+      "email": "sofia@example.com",
+      "passwordHash": "b0a814cd3427071d21aa6f730c5212b1:9a4f10107b58b82b61a04bf3280a00f85da6e067a78387d13b923dfd8a04b786a206fce9204ab0622a2aa770073a48b12d73ffceeb2e57a207507ef5f8327013",
+      "role": "provider",
+      "createdAt": "2026-01-01T00:00:00Z"
+    },
+    {
+      "id": "pu2",
+      "name": "Marcus Chen",
+      "email": "marcus@example.com",
+      "passwordHash": "40be113a109570078f38e0a5b9c3c803:7a373549f9f2b64b7f33c626cc05598fcbff343bfcf8561623bf0e2ba0c5884aca97ffc052dc3092029072fb2a6a6fc43ab984469d17198424085043d5b84346",
+      "role": "provider",
+      "createdAt": "2026-01-01T00:00:00Z"
+    },
+    {
+      "id": "pu3",
+      "name": "Elara Williams",
+      "email": "elara@example.com",
+      "passwordHash": "f105b9e4998545dedac8d6d54a5cb1bd:ecd30b11a1f768479f9a76df7313a864fc1e600e5084e826e8bfc252030f8bbf2ce82d8cad11872acdd174ad5911988474be5f697b980cf40059b829e29c4687",
+      "role": "provider",
+      "createdAt": "2026-01-01T00:00:00Z"
+    },
+    {
+      "id": "pu4",
+      "name": "Riko Nakamura",
+      "email": "riko@example.com",
+      "passwordHash": "6f8b39eb0302df8d615779db32f26fd3:3fa6a1c228c3955f9def8c1fc71a93b0133e7af71ba7be9d4e242dcd9008e439fd5d322baed2d5cb230d8f535d514ef19bb6914f945cebe0ffcddab888c31bf1",
+      "role": "provider",
+      "createdAt": "2026-01-01T00:00:00Z"
+    },
+    {
+      "id": "pu5",
+      "name": "Lena Kovac",
+      "email": "lena@example.com",
+      "passwordHash": "a8bb2b8df9f3bc25312d07e133a035b8:e35d4be365a3d97c481f69c40d08e6602bc222e28a41b2c2a2b07e9403e6d94fba9ae3ab39d5aaaa3c3129d0ff1c9e25afe13fe8607d1a51361e27899a68ed15",
+      "role": "provider",
+      "createdAt": "2026-01-01T00:00:00Z"
+    },
+    {
+      "id": "pu6",
+      "name": "Omar Farouk",
+      "email": "omar@example.com",
+      "passwordHash": "c6f09f1cdd9878770ff2b814b428ea68:fd738b2f98305fe55302ec2188f681568443f98a2ba652aff1f3adfe191b736d3d8c6475adcb1953fe22f15ce259b4750483c542999bc78d28d15d93f493cad8",
+      "role": "provider",
+      "createdAt": "2026-01-01T00:00:00Z"
+    }
+  ],
+  "providers": [
+    {
+      "id": "p1",
+      "userId": "pu1",
+      "name": "Sofia Laurent",
+      "category": "Personal Assistant",
+      "bio": "10+ years executive PA across London, Paris & Dubai. Expert in travel logistics, calendar management, and HNWI client relations.",
+      "languages": [
+        "English",
+        "French",
+        "Arabic"
+      ],
+      "location": "Dubai, UAE",
+      "rate": "$320/day",
+      "rating": 4.9,
+      "reviewCount": 87,
+      "verified": true,
+      "availableModes": [
+        "daily",
+        "weekly",
+        "event"
+      ]
+    },
+    {
+      "id": "p2",
+      "userId": "pu2",
+      "name": "Marcus Chen",
+      "category": "Driver",
+      "bio": "Former executive-protection driver, 8 years. Defensive-driving certified, navigates 12 major cities. Precision, punctuality, discretion.",
+      "languages": [
+        "English",
+        "Mandarin",
+        "Cantonese"
+      ],
+      "location": "Hong Kong / Singapore",
+      "rate": "$280/day",
+      "rating": 4.8,
+      "reviewCount": 64,
+      "verified": true,
+      "availableModes": [
+        "daily",
+        "event"
+      ]
+    },
+    {
+      "id": "p3",
+      "userId": "pu3",
+      "name": "Elara Williams",
+      "category": "Hostess",
+      "bio": "Luxury hospitality specialist. Monaco Grand Prix, Art Basel, private superyacht charters. Native English, fluent French, conversational Italian.",
+      "languages": [
+        "English",
+        "French",
+        "Italian"
+      ],
+      "location": "Monaco / Paris",
+      "rate": "$380/day",
+      "rating": 4.95,
+      "reviewCount": 112,
+      "verified": true,
+      "availableModes": [
+        "event",
+        "daily"
+      ]
+    },
+    {
+      "id": "p4",
+      "userId": "pu4",
+      "name": "Riko Nakamura",
+      "category": "Chaperone",
+      "bio": "Discreet professional chaperone for executive travel. Former diplomat's aide. Background-checked, CPR certified.",
+      "languages": [
+        "English",
+        "Japanese",
+        "Korean"
+      ],
+      "location": "Tokyo / Seoul",
+      "rate": "$300/day",
+      "rating": 4.85,
+      "reviewCount": 45,
+      "verified": true,
+      "availableModes": [
+        "daily",
+        "weekly",
+        "event"
+      ]
+    },
+    {
+      "id": "p5",
+      "userId": "pu5",
+      "name": "Lena Kovac",
+      "category": "Personal Assistant",
+      "bio": "Multilingual corporate PA for Eastern Europe & MENA markets. MBA, 7 years private-equity support.",
+      "languages": [
+        "English",
+        "Russian",
+        "Czech",
+        "German"
+      ],
+      "location": "Prague / Vienna",
+      "rate": "$295/day",
+      "rating": 4.75,
+      "reviewCount": 38,
+      "verified": true,
+      "availableModes": [
+        "daily",
+        "weekly"
+      ]
+    },
+    {
+      "id": "p6",
+      "userId": "pu6",
+      "name": "Omar Farouk",
+      "category": "Artist",
+      "bio": "Acclaimed oud player & jazz-fusion composer. Performed at Cannes, ADIPEC, and private royal events across the Gulf. Portfolio on request.",
+      "languages": [
+        "English",
+        "Arabic",
+        "French"
+      ],
+      "location": "Cairo / Riyadh",
+      "rate": "$1,200/event",
+      "rating": 4.92,
+      "reviewCount": 33,
+      "verified": true,
+      "availableModes": [
+        "event"
+      ]
+    }
+  ],
+  "bookings": [
+    {
+      "id": "bk1",
+      "clientId": "client-1",
+      "clientName": "James Harrington",
+      "providerId": "p1",
+      "providerName": "Sofia Laurent",
+      "category": "Personal Assistant",
+      "startDate": "2026-08-10",
+      "endDate": "2026-08-14",
+      "mode": "weekly",
+      "status": "confirmed",
+      "notes": "Singapore trip — full logistics support.",
+      "totalCost": "$1,600",
+      "createdAt": "2026-08-01T10:00:00Z"
+    },
+    {
+      "id": "bk2",
+      "clientId": "client-1",
+      "clientName": "James Harrington",
+      "providerId": "p3",
+      "providerName": "Elara Williams",
+      "category": "Hostess",
+      "startDate": "2026-08-20",
+      "endDate": "2026-08-20",
+      "mode": "event",
+      "status": "pending",
+      "notes": "Product launch, 120 guests.",
+      "totalCost": "$380",
+      "createdAt": "2026-08-02T14:00:00Z"
+    },
+    {
+      "id": "bk3",
+      "clientId": "client-2",
+      "clientName": "Isabelle Moreau",
+      "providerId": "p2",
+      "providerName": "Marcus Chen",
+      "category": "Driver",
+      "startDate": "2026-08-08",
+      "endDate": "2026-08-08",
+      "mode": "daily",
+      "status": "completed",
+      "totalCost": "$280",
+      "createdAt": "2026-07-25T09:00:00Z"
+    }
+  ],
+  "sessions": []
+}

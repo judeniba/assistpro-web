@@ -1,0 +1,38 @@
+{
+  "node": {
+    "40d57041cdfa0bdc10362d627222986aceb286478a": {
+      "workers": {
+        "app/dashboard/provider/page": {
+          "moduleId": 70206,
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "exportedName": "cancelBooking",
+      "filename": "app/actions.ts"
+    },
+    "60adaf8d796dbfc7ce85d158ead73355c9fad4c8f6": {
+      "workers": {
+        "app/dashboard/provider/page": {
+          "moduleId": 70206,
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "exportedName": "toggleProviderVerification",
+      "filename": "app/actions.ts"
+    },
+    "60e3f6f21ad16dd19c7483c001f78b48a92896948a": {
+      "workers": {
+        "app/dashboard/provider/page": {
+          "moduleId": 70206,
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "exportedName": "updateBookingStatus",
+      "filename": "app/actions.ts"
+    }
+  },
+  "edge": {}
+}

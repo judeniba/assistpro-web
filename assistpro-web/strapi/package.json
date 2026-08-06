@@ -1,0 +1,23 @@
+{
+  "name": "assistpro-strapi",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build"
+  },
+  "dependencies": {
+    "@strapi/provider-email-nodemailer": "^4.25.9",
+    "@strapi/plugin-email": "^4.25.9",
+    "@strapi/plugin-i18n": "4.25.9",
+    "@strapi/plugin-users-permissions": "4.25.9",
+    "@strapi/provider-email-sendmail": "^4.25.9",
+    "@strapi/strapi": "4.25.9",
+    "pg": "^8.11.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^5.3.4",
+    "styled-components": "^5.3.11"
+  }
+}

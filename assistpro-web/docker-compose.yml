@@ -1,0 +1,39 @@
+version: "3.8"
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: assistpro-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: assistpro
+      POSTGRES_USER: assistpro
+      POSTGRES_PASSWORD: assistpro
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  strapi:
+    image: strapi/strapi:4.25.9
+    container_name: assistpro-strapi
+    restart: unless-stopped
+    environment:
+      DATABASE_CLIENT: postgres
+      DATABASE_HOST: postgres
+      DATABASE_PORT: 5432
+      DATABASE_NAME: assistpro
+      DATABASE_USERNAME: assistpro
+      DATABASE_PASSWORD: assistpro
+      JWT_SECRET: replace-with-a-random-secret
+      APP_KEYS: replace-with-app-key-1,replace-with-app-key-2
+      API_TOKEN_SALT: replace-with-a-random-salt
+      ADMIN_JWT_SECRET: replace-with-a-random-admin-secret
+    ports:
+      - "1337:1337"
+    depends_on:
+      - postgres
+    volumes:
+      - ./strapi:/srv/app
+
+volumes:
+  postgres_data:
