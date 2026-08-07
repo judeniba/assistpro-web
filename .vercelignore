@@ -1,0 +1,10 @@
+# Exclude from Vercel deployment
+.git
+.gitignore
+README.md
+node_modules
+.next
+.env*.local
+*.log
+.DS_Store
+assistpro-web.zip
